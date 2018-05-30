@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: xd-eureka-server2
+server:
+  port: 8002
+eureka:
+  instance:
+      instance-id: ${spring.application.name}:${server.port}
+      prefer-ip-address: true
+      lease-renewal-interval-in-seconds: 5
+      lease-expiration-duration-in-seconds: 15
+      hostname: server2
+  client:
+    serviceUrl:
+       defaultZone: http://server1:8001/eureka/,http://server3:8003/eureka/
+    register-with-eureka: false
+    fetch-registry: false
