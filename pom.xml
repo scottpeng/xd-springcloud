@@ -15,10 +15,17 @@
         <version>1.5.8.RELEASE</version>
     </parent>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
     <modules>
         <module>xd-eureka-server1</module>
 		<module>xd-eureka-server2</module>
 		<module>xd-eureka-server3</module>
+        <module>xd-springcloud-provider</module>
     </modules>
 
     <build>

@@ -5,13 +5,15 @@ server:
   port: 8003
 eureka:
   instance:
-      instance-id: ${spring.application.name}:${server.port}
-      prefer-ip-address: true
-      lease-renewal-interval-in-seconds: 5
-      lease-expiration-duration-in-seconds: 15
-      hostname: server3
+    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 15
+    hostname: server3
   client:
     serviceUrl:
        defaultZone: http://server1:8001/eureka/,http://server2:8002/eureka/
     register-with-eureka: false
     fetch-registry: false
+  server:
+    enable-self-preservation: false
