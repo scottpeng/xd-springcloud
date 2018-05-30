@@ -26,6 +26,7 @@
 		<module>xd-eureka-server2</module>
 		<module>xd-eureka-server3</module>
         <module>xd-springcloud-provider</module>
+        <module>xd-springcloud-consumer</module>
     </modules>
 
     <build>
