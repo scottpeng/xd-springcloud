@@ -1,0 +1,19 @@
+server:
+  port: 7000
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://server1:8001/eureka/,http://server2:8002/eureka/,http://server3:8003/eureka/
+spring:
+  application:
+    name: xd-springcloud-gateway-zuul
+zuul:
+  routes:
+    consumer:
+       path: /scott/**
+       service-id: xd-springcloud-consumer
+
+
+

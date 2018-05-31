@@ -29,6 +29,8 @@
         <module>xd-springcloud-consumer</module>
         <module>xd-springcloud-consumer-hystrix</module>
         <module>xd-springcloud-hystrix-dashboard</module>
+        <module>xd-springcloud-gateway-zuul</module>
+        <module>xd-springcloud-config-server</module>
     </modules>
 
     <build>

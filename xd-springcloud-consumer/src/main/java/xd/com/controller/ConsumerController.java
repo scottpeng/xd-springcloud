@@ -2,6 +2,7 @@ package xd.com.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,12 +18,16 @@ import xd.com.config.ListenerConfig;
 @RequestMapping("consumer")
 public class ConsumerController {
 
+    @Value("${your.profile}")
+    private String profile ;
+
 
     @Autowired
     private RestTemplate restTemplate ;
 
     @GetMapping("getUserInfo")
     public String getUserInfo(){
+        System.out.println("config====>"+profile);
         JSONObject json = restTemplate.
                 getForEntity("http://xd-springcloud-provider/provider/test", JSONObject.class).getBody();
         System.err.println(ListenerConfig.getPort());

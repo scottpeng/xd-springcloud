@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/scottpeng/xd-springcloud.git
+          basedir: config-file
+          password: pqq820930
+          username: scottpeng

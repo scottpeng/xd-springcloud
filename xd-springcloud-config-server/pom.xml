@@ -9,15 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>xd-springcloud-provider</artifactId>
+    <artifactId>xd-springcloud-config-server</artifactId>
 
-    <name>xd-springcloud-provider</name>
-     <url>http://www.example.com</url>
+    <name>xd-springcloud-config-server</name>
+    <url>http://www.example.com</url>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+              <groupId>org.springframework.cloud</groupId>
+              <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
 
         <dependency>
@@ -26,9 +26,10 @@
         </dependency>
 
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-
     </dependencies>
+
+
 </project>
