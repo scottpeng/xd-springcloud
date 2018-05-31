@@ -27,6 +27,8 @@
 		<module>xd-eureka-server3</module>
         <module>xd-springcloud-provider</module>
         <module>xd-springcloud-consumer</module>
+        <module>xd-springcloud-consumer-hystrix</module>
+        <module>xd-springcloud-hystrix-dashboard</module>
     </modules>
 
     <build>
