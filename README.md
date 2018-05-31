@@ -5,23 +5,23 @@ springcloud 系列组件
    启动后显示如下：http://server3:8003  <br>
   ![image](https://github.com/scottpeng/xd-springcloud/blob/master/images-folder/eureka-sever.png)
    
-2. 服务提供方 <br>
-   xd-springcloud-provider
+2. 服务提供方 xd-springcloud-provider <br>
    
-3. 服务消费方 <br>
-   xd-springcloud-consumer  采用Ribbon的均衡负载  RestTemplate <br>
    
-    @Bean
-    @LoadBalanced
-    public RestTemplate restTemplate(SimpleClientHttpRequestFactory factory){
-        return new RestTemplate(factory);
-    }
+3. 服务消费方 xd-springcloud-consumer  采用Ribbon的均衡负载  RestTemplate <br>
 
-    @Bean
-    public SimpleClientHttpRequestFactory simpleClientHttpRequestFactory(){
-        SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
-        factory.setReadTimeout(5000);//ms
-        factory.setConnectTimeout(15000);//ms
-        return factory;
-    }
+   
+    @Bean <br>
+    @LoadBalanced <br>
+    public RestTemplate restTemplate(SimpleClientHttpRequestFactory factory){ <br>
+        return new RestTemplate(factory); <br>
+    } <br>
+
+    @Bean <br>
+    public SimpleClientHttpRequestFactory simpleClientHttpRequestFactory(){ <br>
+        SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory(); <br>
+        factory.setReadTimeout(5000);//ms <br>
+        factory.setConnectTimeout(15000);//ms <br>
+        return factory; <br>
+    } <br>
    
