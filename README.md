@@ -22,6 +22,6 @@ springcloud 系列组件
         SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory(); <br>
         factory.setReadTimeout(5000);//ms <br>
         factory.setConnectTimeout(15000);//ms <br>
-        return factory; <br>
+        return factory;<br>
     } <br>
    
